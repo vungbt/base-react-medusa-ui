@@ -18,6 +18,9 @@
     "@medusajs/admin-shared": "^2.1.0",
     "@medusajs/js-sdk": "^2.1.0",
     "@medusajs/ui": "^4.0.1",
+    "@tanstack/react-query": "^5.62.3",
+    "@tanstack/react-table": "^8.20.5",
+    "@tanstack/react-virtual": "^3.11.0",
     "date-fns": "^4.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
@@ -29,17 +32,18 @@
     "react-hook-form": "^7.53.2",
     "react-router-dom": "^7.0.2",
     "tailwindcss-animate": "^1.0.7",
+    "vite-tsconfig-paths": "^5.1.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.15.0",
+    "@medusajs/admin-vite-plugin": "^2.1.0",
     "@medusajs/types": "^2.1.0",
     "@medusajs/ui-preset": "^2.1.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
@@ -51,7 +55,8 @@
     "tailwindcss": "^3.4.16",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-inspect": "^0.10.3"
   },
   "engines": {
     "node": "~20.18.0",

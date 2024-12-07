@@ -1,17 +1,13 @@
-import { Button, Checkbox } from "@medusajs/ui"
+import { QueryClientProvider } from "@tanstack/react-query"
+import MasterRouter from "routers/master"
+import { queryClient } from "utils/api/client/query-client"
 
 function App() {
   return (
     <>
-      <div>
-        <Button>Label</Button>
-        <div className="flex items-center space-x-2">
-          <Checkbox id="billing-shipping" />
-          <label htmlFor="billing-shipping">
-            Billing address same as shipping address
-          </label>
-        </div>
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <MasterRouter />
+      </QueryClientProvider>
     </>
   )
 }

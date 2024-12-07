@@ -1,11 +1,11 @@
 import { RenderIcon } from "libraries/icons"
-import { Navigate, Outlet, useLocation } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import { RoutePath } from "routers/config"
 import { useMe } from "utils/api/user"
 
-export default function ProtectedLayout() {
+export default function AuthLayout() {
   const { user, isLoading } = useMe()
-  const location = useLocation()
+
   if (isLoading) {
     return (
       <>
@@ -13,8 +13,13 @@ export default function ProtectedLayout() {
       </>
     )
   }
-  if (!user) {
-    return <Navigate to={RoutePath.Login} state={{ from: location }} replace />
+  if (user) {
+    return <Navigate to={RoutePath.HomePage} replace />
   }
-  return <Outlet />
+
+  return (
+    <div className="auth-background h-screen">
+      <Outlet />
+    </div>
+  )
 }

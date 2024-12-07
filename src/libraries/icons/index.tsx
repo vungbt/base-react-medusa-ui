@@ -21,6 +21,7 @@ import ShoppingCart from "./shopping-cart"
 import TagIcon from "./tag"
 import Users from "./users"
 import Spinner from "./spinner"
+import Loading from "./loading"
 
 export type IconProps = {
   className?: string
@@ -129,7 +130,7 @@ export const Icons: IconsType = {
     return <Spinner {...props} />
   },
   loading: (props: IconProps) => {
-    return <Spinner {...props} />
+    return <Loading {...props} />
   },
 }
 

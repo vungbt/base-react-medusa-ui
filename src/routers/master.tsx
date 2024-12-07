@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
 import configRoutes, { IRoute } from "./config"
 import { Suspense } from "react"
 import ErrorPage from "modules/error"
@@ -28,7 +28,7 @@ const renderRoutes = (routes: IRoute[]) => {
             path={item.path}
             element={
               <Suspense fallback={<RenderIcon name="spinner" />}>
-                {Element && <Element />}
+                {Element ? <Element /> : <Outlet />}
               </Suspense>
             }
             errorElement={ErrorElement ? <ErrorElement /> : <ErrorPage />}

@@ -16,7 +16,7 @@ module.exports = {
         primary: "#1272E5",
         transparent: "transparent",
         text: "#1E1E1E",
-        bg: {
+        "ui-bg": {
           base: {
             DEFAULT: "#ffffff",
             hover: "#f4f4f5",
@@ -58,7 +58,7 @@ module.exports = {
             hover: "#d4d4d8",
           },
         },
-        fg: {
+        "ui-fg": {
           base: {
             DEFAULT: "#18181B ",
           },
@@ -85,7 +85,7 @@ module.exports = {
             DEFAULT: "#52525b",
           },
         },
-        border: {
+        "ui-border": {
           base: {
             DEFAULT: "#e4e4e7",
           },
@@ -108,16 +108,19 @@ module.exports = {
             DEFAULT: "#09090b00",
           },
         },
-        button: {
+        "ui-button": {
           danger: {
             DEFAULT: "#e11d48",
             hover: "#be123c",
             pressed: "#9f1239",
           },
           inverted: {
-            DEFAULT: "#09090b",
-            hover: "#18181b",
-            pressed: "#27272a",
+            // DEFAULT: "#09090b",
+            // hover: "#18181b",
+            // pressed: "#27272a",
+            DEFAULT: "#3B82F6",
+            hover: "#2563eb",
+            pressed: "#2563eb",
           },
           neutral: {
             DEFAULT: "#ffffff",
@@ -130,7 +133,7 @@ module.exports = {
             pressed: "#e4e4e7",
           },
         },
-        code: {
+        "ui-code": {
           "bg-base": {
             DEFAULT: "#18181b",
           },
@@ -141,48 +144,83 @@ module.exports = {
             DEFAULT: "#3f3f46",
           },
         },
-        tag: {
+        "ui-tag": {
           blue: {
             DEFAULT: "#D1FAE5",
+            bg: "#D1FAE5",
             hover: "#bfdbfe",
+            "bg-hover": "#bfdbfe",
             border: "#bfdbfe",
             icon: "#2563eb",
             text: "#1d4ed8",
           },
           green: {
             DEFAULT: "#d1fae5",
+            bg: "#d1fae5",
             hover: "#a7f3d0",
+            "bg-hover": "#a7f3d0",
             border: "#a7f3d0",
             icon: "#10B981",
             text: "#065F46",
           },
           neutral: {
             DEFAULT: "#F4F4F5",
+            bg: "#F4F4F5",
             hover: "#e4e4e7",
+            "bg-hover": "#e4e4e7",
             border: "#e4e4e7",
             icon: "#A1A1AA",
             text: "#52525b",
           },
           orange: {
             DEFAULT: "#fef4c7",
+            bg: "#fef4c7",
             hover: "#fde68a",
+            "bg-hover": "#fde68a",
             border: "#FED7AA",
             icon: "#d97706",
             text: "#9A3412",
           },
           purple: {
             DEFAULT: "#ede9fe",
+            bg: "#ede9fe",
             hover: "#ddd6fe",
+            "bg-hover": "#ddd6fe",
             border: "#ddd6fe",
             icon: "#7c3aed",
             text: "#6d28d9",
           },
           red: {
             DEFAULT: "#ffe4e6",
+            bg: "#ffe4e6",
             hover: "#fecdd3",
+            "bg-hover": "#fecdd3",
             border: "#fecdd3",
             icon: "#e11d48",
             text: "#be123c",
+          },
+        },
+        contrast: {
+          "fg-primary": {
+            DEFAULT: "rgba(255, 255, 255, 1)",
+            99: "rgba(255, 255, 255, 0.99)",
+            88: "rgba(255, 255, 255, 0.88)",
+            77: "rgba(255, 255, 255, 0.77)",
+            66: "rgba(255, 255, 255, 0.66)",
+            55: "rgba(255, 255, 255, 0.55)",
+            44: "rgba(255, 255, 255, 0.44)",
+            33: "rgba(255, 255, 255, 0.33)",
+            22: "rgba(255, 255, 255, 0.22)",
+            11: "rgba(255, 255, 255, 0.11)",
+            90: "rgba(255, 255, 255, 0.90)",
+            80: "rgba(255, 255, 255, 0.80)",
+            70: "rgba(255, 255, 255, 0.70)",
+            60: "rgba(255, 255, 255, 0.60)",
+            50: "rgba(255, 255, 255, 0.50)",
+            40: "rgba(255, 255, 255, 0.40)",
+            30: "rgba(255, 255, 255, 0.30)",
+            20: "rgba(255, 255, 255, 0.20)",
+            10: "rgba(255, 255, 255, 0.10)",
           },
         },
       },
@@ -217,6 +255,9 @@ module.exports = {
           "0px 1px 2px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(0, 0, 0, 0.08)",
         "border-interactive":
           "0px 1px 2px rgba(30, 58, 138, 0.5), 0px 0px 0px 1px #3B82F6",
+        auth: "0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 8px 16px rgba(0, 0, 0, 0.08)",
+        "card-rest":
+          "0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px -1px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.04)",
       },
       dropShadow: {
         blue: "1px 2px 4px rgba(59, 130, 246, 0.5)",

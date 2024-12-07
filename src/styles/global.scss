@@ -31,4 +31,95 @@
     @apply text-ui-fg-base antialiased;
     text-rendering: optimizeLegibility;
   }
+
+  ::placeholder {
+    @apply text-ui-fg-muted text-small leading-5;
+  }
+}
+
+.main-background {
+  background: url("/background/dashboard-background.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.auth-background {
+  background: url("/background/auth-background.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.custom-input ~ div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// sidebar
+.sidebar {
+  ul {
+    list-style: none;
+  }
+
+  .menus {
+    @apply p-3 flex flex-col gap-[2px];
+
+    li {
+      .menu-item {
+        @apply flex items-center text-small text-ui-fg-subtle font-medium gap-2 min-h-7 w-full p-[2px];
+
+        span {
+          @apply transition-all ease-in-out;
+        }
+
+        &:hover {
+          span {
+            @apply text-ui-fg-base;
+          }
+        }
+      }
+    }
+
+    .item-show {
+      button {
+        span {
+          @apply text-ui-fg-base;
+        }
+      }
+    }
+
+    .active {
+      @apply shadow-card-rest bg-ui-bg-base rounded-md;
+
+      span {
+        @apply text-ui-fg-base;
+      }
+    }
+  }
+
+  .submenus {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    > div {
+      @apply overflow-hidden flex flex-col gap-[2px];
+    }
+
+    li {
+      @apply p-[2px];
+      .menu-item {
+        @apply text-ui-fg-muted transition-all ease-linear;
+      }
+    }
+  }
+
+  .show {
+    grid-template-rows: 1fr;
+  }
 }

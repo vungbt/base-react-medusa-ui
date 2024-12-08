@@ -123,3 +123,41 @@
     grid-template-rows: 1fr;
   }
 }
+
+.rc-dialog-wrap {
+  overflow: hidden !important;
+}
+.custom-dialog {
+  .rc-dialog-close {
+    display: none;
+  }
+
+  .rc-dialog-body {
+    padding: 0;
+  }
+}
+
+.height-content {
+  max-height: calc(100vh - 64px - 24px - 45px - 24px - 96px - 114px);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: rgba(250, 250, 250, 1);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 1);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 1);
+}

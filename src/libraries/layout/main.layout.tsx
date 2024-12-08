@@ -10,7 +10,7 @@ export default function MainLayout({}: MainLayoutProps) {
       <div className="main-background h-screen">
         <div className="flex items-start">
           <Sidebar />
-          <div className="px-4 pt-6 pb-2 flex-1">
+          <div className="px-4 pt-6 pb-2 flex-1 max-h-screen overflow-hidden">
             <TopBar />
             <div className="mt-4 bg-ui-bg-base rounded-lg">
               <Outlet />

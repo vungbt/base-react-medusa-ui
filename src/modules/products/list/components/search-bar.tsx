@@ -13,7 +13,12 @@ type SearchForm = {
   category?: string
 }
 
-export default function SearchBar() {
+type SearchBarProps = {
+  onSearch: (values: SearchForm) => void
+  onAdvance: () => void
+}
+;("")
+export default function SearchBar({ onSearch, onAdvance }: SearchBarProps) {
   const schema = zod.object({
     keyword: zod.string(),
     category: zod.string(),
@@ -46,14 +51,10 @@ export default function SearchBar() {
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = async (values: SearchForm) => {
-    console.log("values====>", values)
-  }
-
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="w-full flex flex-col gap-3 flex-wrap px-4 pb-4 pt-6"
+      onSubmit={handleSubmit(onSearch)}
+      className="w-full flex flex-col gap-3 flex-wrap px-4 py-6"
     >
       <div className="flex gap-3 items-end flex-wrap">
         <div className="flex-1">
@@ -106,7 +107,12 @@ export default function SearchBar() {
 
         <div className="flex items-center gap-2">
           <Button type="submit" leftIcon="magnifying-glass" text="Search" />
-          <Button type="button" styles="outline" text="Advance search" />
+          <Button
+            type="button"
+            styles="outline"
+            text="Advance search"
+            onClick={onAdvance}
+          />
         </div>
       </div>
     </form>

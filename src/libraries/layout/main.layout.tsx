@@ -1,39 +1,23 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "./sidebar"
+import TopBar from "./top-bar"
+import { TopBarProvider } from "hooks/top-bar"
 
 type MainLayoutProps = {}
 export default function MainLayout({}: MainLayoutProps) {
   return (
-    <div className="main-background h-screen">
-      <div className="flex items-start gap-4">
-        <Sidebar />
-        <div>
-          <Outlet />
-          Footer
+    <TopBarProvider>
+      <div className="main-background h-screen">
+        <div className="flex items-start">
+          <Sidebar />
+          <div className="px-4 pt-6 pb-2 flex-1">
+            <TopBar />
+            <div className="mt-4 bg-ui-bg-base rounded-lg">
+              <Outlet />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </TopBarProvider>
   )
 }
-
-/* Frame 2170 */
-
-/* Auto layout */
-// display: flex;
-// flex-direction: row;
-// align-items: center;
-// padding: 4px 8px 4px 34px;
-// gap: 8px;
-
-// width: 196px;
-// height: 28px;
-
-// background: #FFFFFF;
-// /* Light/Elevation/card-rest */
-// box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px -1px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.04);
-// border-radius: 6px;
-
-// /* Inside auto layout */
-// flex: none;
-// order: 0;
-// flex-grow: 1;

@@ -17,6 +17,7 @@ export type ButtonProps = Omit<
   text: ReactNode
   size?: "small" | "base" | "large" | "xlarge"
   variant?: "primary" | "transparent" | "secondary" | "danger"
+  styles?: "default" | "outline"
   customClass?: {
     icon?: string
   }
@@ -34,6 +35,7 @@ export const Button = forwardRef(function ButtonBase(
     leftIcon,
     isLoading,
     size = "large",
+    styles,
     disabled,
     ...reset
   } = props
@@ -47,8 +49,11 @@ export const Button = forwardRef(function ButtonBase(
       className={clsx(
         {
           "shadow-non": variant === "primary",
-          "rounded-lg text-medium font-medium text-contrast-fg-primary-88":
-            size === "large",
+          "rounded-lg text-medium font-medium": size === "large",
+          "text-contrast-fg-primary-88": variant === "primary",
+          "text-ui-button-inverted-secondary": variant === "secondary",
+          "border border-solid border-ui-fg-interactive bg-white text-ui-fg-interactive hover:text-white box-border":
+            styles === "outline",
         },
         className
       )}

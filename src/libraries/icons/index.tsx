@@ -22,6 +22,7 @@ import TagIcon from "./tag"
 import Users from "./users"
 import Spinner from "./spinner"
 import Loading from "./loading"
+import ChevronLeft from "./chevron-left"
 
 export type IconProps = {
   className?: string
@@ -56,6 +57,7 @@ const IconsDefine = {
   users: "users",
   spinner: "spinner",
   loading: "loading",
+  "chevron-left": "chevron-left",
 } as const
 
 export type IconName = keyof typeof IconsDefine
@@ -131,6 +133,9 @@ export const Icons: IconsType = {
   },
   loading: (props: IconProps) => {
     return <Loading {...props} />
+  },
+  "chevron-left": (props: IconProps) => {
+    return <ChevronLeft {...props} />
   },
 }
 

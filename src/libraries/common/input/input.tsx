@@ -4,7 +4,7 @@ import { MedusaInput } from "libraries/medusa"
 import { ReactNode, Ref, forwardRef } from "react"
 import { clsx } from "utils/common"
 
-type InputProps = Omit<
+export type InputProps = Omit<
   React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
@@ -16,6 +16,7 @@ type InputProps = Omit<
   rightIcon?: IconName
   loading?: boolean
   error?: string
+  isShowError?: boolean
   size?: "small" | "base" | "large"
   customClass?: {
     root?: string
@@ -37,10 +38,11 @@ export const Input = forwardRef(function Input(
     size = "large",
     customClass,
     error,
+    isShowError,
     className,
     ...reset
   } = props
-  const isError = (error && error?.length > 0) || false
+  const isError = (error && error?.length > 0) || isShowError || false
 
   return (
     <div className="w-full">

@@ -122,6 +122,11 @@ module.exports = {
             hover: "#2563eb",
             pressed: "#2563eb",
           },
+          'inverted-secondary': {
+            DEFAULT: "#09090b",
+            hover: "#18181b",
+            pressed: "#27272a",
+          },
           neutral: {
             DEFAULT: "#ffffff",
             hover: "#f4f4f5",
